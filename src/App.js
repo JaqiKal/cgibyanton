@@ -1,12 +1,14 @@
-//import logo from "./logo.svg";
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1 className="text-4xl font-bold text-center mt-5">TailwindCSS is working!</h1>
-    </div>
+    <Router basename="/cgibyanton">
+      <Routes>
+        <Route path="/home" element={<Home />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
